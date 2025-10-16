@@ -1,17 +1,67 @@
-body{
-  background-color: red;
+nav{
+  background-color:rgb(0, 247, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 50px;
+  position: relative;
 }
-.box{
-  width: 200px;
-  height: 200px;
-  border: 10px solid black;
-}
-@media (min-width:0px) and (max-width:500px){
-  body{
-    background-color: green;
-  }
-.box{
-  width: 100%;
-}
+.links{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
 }
 
+.btn1{
+  border: 1px solid white;
+  background-color: rosybrown;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 20px;
+}
+
+.btn2{
+  border: none;
+  background-color: rosybrown;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 20px;
+}
+
+.buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.menu{
+  display: none;
+}
+
+.dropDown{
+  background-color: red;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  transform: translateY(-350px);
+  transition: all 1s linear 0s;
+}
+
+.dropDown:target{
+  transform: translateY(0px);
+}
+
+@media screen and (max-width:700px) {
+  .menu{
+    display: block;
+  }
+  .links{
+    display: none;
+  }
+  .buttons{
+    display: none;
+  }
+}
+ 
